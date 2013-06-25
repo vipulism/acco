@@ -1,0 +1,48 @@
+<dl>
+<dt>what is the name</dt>
+<dd>Name none</dd>
+<dt>Company</dt>
+<dd>BSC</dd>
+<dt>Year</dt>
+<dd>2013</dd>
+<dt>Place</dt>
+<dd>Delhi</dd>
+<dt>Color</dt>
+<dd>Red</dd>
+</dl>
+ 
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+(function(){
+$('dd').filter(':nth-child(n+4)').addClass('hide');
+$('dl').on('mouseenter', 'dt', function(){
+$(this).next().slideToggle(200);
+$(this).next().siblings('dd').slideUp(200);
+})
+})();
+</script>
+<style>
+  
+ 
+dl{
+}
+dt{
+font-size: 2em;
+line-height: 1.5em;
+background-color: #e3e3e3;
+border-bottom: 1px solid #c5c5c5;
+cursor: pointer;
+border-top: 1 px solid white;
+text-align: center;
+}
+dd{
+margin: 0;
+padding: 1em 0;
+text-align: center;
+}
+.hide{
+display: none;
+}
+dt:first-child{border-top: none};
+dt:nth-last-child(2){border-bottom: none};
+</style>
