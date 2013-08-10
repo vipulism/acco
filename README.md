@@ -1,4 +1,4 @@
 acco
 ====
 
-accordian
+my simple jQuary accordian
